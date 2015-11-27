@@ -1,0 +1,82 @@
+As a part of P1, you will be checking validity of following set of hypothesis on given dataset.
+ 
+A. <knimgao>-<1> A node with higher degree would belong to more number of circles.
+B. <amittal>-<1> A circle with a higher density would have a greater degree of intersection with other circles
+C. <krege>-<1> In a network, nodes with more common circles have more common features as compared to nodes with less common circles.
+
+Definitions:
+Density of circle: the ratio of existing edges within members of the circle to the maximum possible edges within its members.
+Circles:  These are social circles, most analogous to groups we have in facebook. Looking into the  data files should give more clarity.
+Common circle: For two different users, common circles are the ones to which they belong.
+
+Output Format:
+A.
+<knimgao>-<1> A node with higher degree would belong to more number of circles.
+Check the validity of this hypothesis for Ego Networks of Users : 0 and 348 in your code.
+ 
+Please use following output format for P1:
+  
+1) For Ego Node 0, your submission should contain output of your program with following CSV columns:
+   NodeID, Degree of Node, Number of circles it belongs to
+   
+   Each row will be related to user in the Ego Node's network.
+   NodeID: ID of user,
+   Degree of node: Number of edges from this user to other users in the ego network (refer 0.edges file) (EDIT: Refer facebook_combined.txt file as per clarofication posted @29. ) (EDIT2: Use the degree of user from ego network. Hence, use the 0.edges file.)
+   Number of circles: In 0.circles file, the number of circles that this user belongs to.
+   Also, sort the table in decreasing order of number of circles.
+    
+2) Repeat the same for Ego Node 348.
+     
+3) Graph: Include graph of Degree of Nodes vs. Number of circles for both the ego nodes.
+   You can use any tool to generate the graph. Programming of graph is not mandatory.
+      
+       
+4) Conclusion and Explanation:
+   State whether your findings support or oppose the hypothesis.
+   And then briefly explain your conclusion 
+
+B. <amittal>-<1> A circle with a higher density would have a greater degree of intersection with other circles
+Check the validity of this hypothesis for Ego Networks of Users : 107 and 686 in your code.
+
+Please use following output format for P1:
+
+1) For Ego Node 107, your submission should contain output of your program with following CSV columns:
+Circle Name, Density, Degree of intersection with other circles 
+
+Each row will be related to a circle in 107.circles file.
+Circle Name: Circle Name is available as first entry in each row of 107.circles file,
+Density: Ratio of existing edges within the members of a circle to the maximum possible edges within member of circle
+Degree of intersection with other circles: It is the summation of degree of intersection of this circle with all the other circles.
+To calculate degree of intersection between two circles, take the ratio of size of their intersection to the size of their union.
+ 
+ sort the table in decreasing order of density of circle.
+
+ 2) Repeat the same for Ego Node 686.
+ 3) Graph: Include graph of Density vs. Degree of intersection for both the ego nodes.
+ You can use any tool to generate the graph. Programming of graph is not mandatory.
+ 4) Conclusion and Explanation:
+ State whether your findings support or oppose the hypothesis.
+ And then briefly explain your conclusion
+
+C. <krege>-<1> In a network, nodes with more common circles have more common features as compared to nodes with less common circles.
+Check the validity of this hypothesis for Ego Networks of Users : 414 and 698 in your code.
+
+Please use following output format for P1:
+
+1) For Ego Node 414, your submission should contain output of your program with following CSV columns:
+NodeID, Number of common circles, Number of common features with ego node
+
+Each row will be related to a user in ego node's network.
+NodeID: ID of user,
+Number of common circles: From 414.circles file, find the number of circles this user belongs to
+Number of common features: Number of common features of this user with the ego user
+sort the table in decreasing order of number of common circles.
+
+2) Repeat the same for Ego Node 698.
+ 
+ 3) Graph: Include graph of Common Circles vs. Common Features for both the ego nodes.
+ You can use any tool to generate the graph. Programming of graph is not mandatory.
+  
+  4) Conclusion and Explanation:
+  State whether your findings support or oppose the hypothesis.
+  And then briefly explain your conclusion
